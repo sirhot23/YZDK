@@ -1,0 +1,6 @@
+{
+  "name": "UniÇözüm - Yapay Zekâ Üniversite Soru ve Sınav Asistanı",
+  "description": "Fakülte ve bölüm müfredatlarına uyumlu, fotoğraftan OCR ile yapay zekâ soru çözüm merkezi, deneme sınavları ve akıllı tekrar defteri.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
