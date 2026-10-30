@@ -221,10 +221,17 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ user, navigate, on
 
       {/* Main Content 2-Column Layout */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        {/* Left 2 Columns: D3 Chart, Active Courses & Shortcuts */}
+        {/* Left 2 Columns: D3 Chart, Daily Goal Module, Active Courses & Shortcuts */}
         <div className="lg:col-span-2 space-y-6">
           {/* D3-based Course Progress Visualization (Donut & Bar chart) */}
           <CourseProgressChart onCourseClick={(courseId) => navigate(`/courses/${courseId}`)} />
+
+          {/* Günlük Hedef (Daily Goal) Modülü - Ders Bazlı İlerleme kutusunun altında */}
+          <DailyGoalCard
+            user={user}
+            navigate={navigate}
+            onUserUpdated={onUserUpdated}
+          />
 
           {/* Active Courses Box */}
           <div className="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm">
@@ -404,15 +411,8 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ user, navigate, on
           </div>
         </div>
 
-        {/* Right 1 Column: Daily Goal Module, Spaced Repetition & Badges */}
+        {/* Right 1 Column: Spaced Repetition & Badges */}
         <div className="space-y-6">
-          {/* Günlük Hedef (Daily Goal) Modülü */}
-          <DailyGoalCard
-            user={user}
-            navigate={navigate}
-            onUserUpdated={onUserUpdated}
-          />
-
           {/* Spaced Repetition (Aralıklı Tekrar) Widget */}
           <div className="bg-gradient-to-br from-indigo-900 to-slate-900 rounded-3xl p-6 text-white shadow-lg border border-indigo-950">
             <div className="flex items-center justify-between mb-3">
